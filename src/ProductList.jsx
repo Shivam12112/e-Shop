@@ -11,8 +11,8 @@ export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className='col-lg-12'>
-          <p className='display-5 p-2'>Product List</p>
+        <div className="col-lg-12">
+          <p className="display-5 p-2">Product List</p>
           {this.state.products.map((prod) => {
             return (
               <>
@@ -42,8 +42,8 @@ export default class ProductList extends Component {
 
   handleIncrement = (product) => {
     let newProducts = [...this.state.products];
-    let index = newProducts.indexOf(product);
-    console.log(newProducts[index]);
+    let index = newProducts.indexOf(product.productName);
+    console.log(product);
 
     let quantity1 = newProducts[index].quantity;
     console.log(quantity1);

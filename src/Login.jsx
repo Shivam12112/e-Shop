@@ -4,7 +4,7 @@ export default class Login extends Component {
     super(props);
     this.state = {
       username: "svm@gmail.com",
-      password: "shivam@123",
+      password: "123",
       message: "",
       messageStyle: "",
       customers: [],
@@ -13,48 +13,48 @@ export default class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className='container'>
-          <form className='mt-3'>
+        <div className="container">
+          <form className="mt-3">
             <h3 className={this.state.messageStyle}>{this.state.message}</h3>
             <h2>Login Here..</h2>
-            <div className='mb-3'>
-              <label htmlFor='exampleInputEmail1' className='form-label'>
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
               </label>
               <input
-                type='email'
-                id='email'
-                className='form-control'
-                onChange={(event) => {
-                  this.setState({ username: event.target.value });
-                }}
-                aria-describedby='emailHelp'
+                type="email"
+                id="email"
+                className="form-control"
+                // onChange={(event) => {
+                //   this.setState({ username: event.target.value });
+                // }}
+                aria-describedby="emailHelp"
               />
-              <div id='emailHelp' className='form-text'>
+              <div id="emailHelp" className="form-text">
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div className='mb-3'>
-              <label htmlFor='exampleInputPassword1' className='form-label'>
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
               </label>
               <input
-                type='password'
-                id='pwd'
-                className='form-control'
-                onChange={(event) => {
-                  this.setState({ password: event.target.value });
-                }}
+                type="password"
+                id="pwd"
+                className="form-control"
+                // onChange={(event) => {
+                //   this.setState({ password: event.target.value });
+                // }}
               />
             </div>
             <button
-              type='submit'
-              className='btn btn-primary'
+              type="submit"
+              className="btn btn-primary"
               onClick={this.handleLogin}
             >
               Login
             </button>
-            <button type='submit' className='btn btn-primary ms-2'>
+            <button type="submit" className="btn btn-primary ms-2">
               Reset
             </button>
           </form>
@@ -83,6 +83,7 @@ export default class Login extends Component {
         message: `You're Logged-In..`,
         messageStyle: "text-success",
       });
+      console.log(this.state.username);
     } else {
       this.setState({
         message: `Invalid Username or Password...`,

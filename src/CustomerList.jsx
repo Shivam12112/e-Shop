@@ -12,16 +12,16 @@ export default class CustomerList extends Component {
   render() {
     return (
       <React.Fragment>
-        <h4 className='border-bottom m-1 p-1'>{this.state.pageTitle}</h4>
-        <table className='table'>
-          <thead className='thead-dark'>
+        <h4 className="border-bottom m-1 p-1">{this.state.pageTitle}</h4>
+        <table className="table">
+          <thead className="thead-dark">
             <tr>
-              <th className='col-md-2'>Photo</th>
-              <th className='col-md-2'>ID</th>
-              <th className='col-md-2'>Name</th>
-              <th className='col-md-2'>Phone</th>
-              <th className='col-md-2'>Email</th>
-              <th className='col-md-2'>Password</th>
+              <th className="col-md-2">Photo</th>
+              <th className="col-md-2">ID</th>
+              <th className="col-md-2">Name</th>
+              <th className="col-md-2">Phone</th>
+              <th className="col-md-2">Email</th>
+              <th className="col-md-2">Password</th>
             </tr>
           </thead>
 
@@ -41,7 +41,7 @@ export default class CustomerList extends Component {
   getPhoneToRender = (phone) => {
     if (phone) return phone;
     else {
-      return <div className='bg-warning p-2 text-center'>No Phone</div>;
+      return <div className="bg-warning p-2 text-center">No Phone</div>;
     }
   };
   getCustomerRow = () => {
@@ -50,9 +50,9 @@ export default class CustomerList extends Component {
         <tbody>
           <tr>
             <td>
-              <img src={cust.photo} alt='' />
+              <img src={cust.photo} alt="" />
               <button
-                className='btn btn-sm btn-primary ms-2'
+                className="btn btn-sm btn-primary ms-2"
                 onClick={() => {
                   this.onChangePicture(cust, index);
                 }}
